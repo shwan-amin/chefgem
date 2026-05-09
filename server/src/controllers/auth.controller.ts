@@ -1,7 +1,9 @@
 import type { Request, Response } from 'express'
 
 export async function registerHandler(_req: Request, res: Response): Promise<void> {
-  // TODO: Validate request and call auth service.
+  const { userName, userEmail }  = _req.body
+  
+  
   res.status(501).json({ message: 'register not implemented yet' })
 }
 
