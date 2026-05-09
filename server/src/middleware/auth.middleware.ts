@@ -33,6 +33,8 @@ export function requireAuth(req: Request, _res: Response, next: NextFunction): v
     }
 
     (req as Request & { userId: string }).userId = subject
+
+    // Auth succeeded and pass control back to route handlers
     next()
   } catch (err) {
     if (err instanceof TokenExpiredError) {
