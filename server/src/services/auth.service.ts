@@ -60,7 +60,15 @@ export async function registerUser(email: string, password: string): Promise<Reg
   }
 }
 
-
+/**
+ * @param {string} email
+ * @param {string} password
+ * @returns {Promise<Token>}
+ * 
+ * Service that handles the login-in of a user. Checks DB entry to see if user
+ * exists, if valid request, return the session token.
+ * 
+ */
 export async function loginUser(email: string, password: string): Promise<Token> {
   // Normalize email
   const normalizedEmail = email.toLowerCase().trim()
