@@ -1,6 +1,5 @@
 import type { NextFunction, Request, Response } from 'express'
 import { registerSchema, loginSchema } from '../validators/auth.validator.js'
-import { email } from 'zod';
 import { registerUser, loginUser } from '../services/auth.service.js'
 
 /**

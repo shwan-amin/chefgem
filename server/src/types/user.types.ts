@@ -1,5 +1,3 @@
-import { string } from "zod";
-
 export interface RegisteredUser {
     id: string,
     email: string
